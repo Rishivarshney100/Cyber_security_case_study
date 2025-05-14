@@ -3,6 +3,7 @@
 
 This repository provides a detailed overview of the cyberattack on the Bowman Avenue Dam in New York. The attack, carried out in 2013 and disclosed publicly in 2015, was an example of an operational cyberattack targeting critical infrastructure. This document outlines the technical, operational, and strategic aspects of the incident.
 
+##  Category: Operational Technology
 ---
 
 ##  1. Year of Incident
@@ -39,6 +40,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 | **Collection**           | Gather intelligence about system configurations and capabilities.          |
 | **Impact** *(Attempted)* | Try to manipulate the dam's physical operations (e.g., control the gate).  |
 
+
 | Technique (how)                             | Description                                                                                              |
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Network Scanning (Reconnaissance)** | Used tools like Shodan to find publicly exposed ICS devices.                                             |
@@ -61,18 +63,22 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 - FBI and DHS launched forensic investigations.
 - Dam’s system was disconnected from the internet.
-- U.S. DOJ indicted **seven Iranian hackers** in 2016.
 - Public attribution increased awareness and policy review.
 
 ---
 
 ##  5. Mitigation Techniques Used
 
-- Network segmentation and firewall implementation.
-- Secure VPNs and multi-factor authentication (MFA).
-- Regular patching and software updates.
-- Cybersecurity training for operators.
-- Deployment of IDS and SIEM systems.
+| **Category**                  | **Mitigation Technique**          | **Description / Action**                                       |
+| ----------------------------- | --------------------------------- | -------------------------------------------------------------- |
+|  **Network Security**       | Disconnection from Internet       | Air-gapped the dam’s control system to block remote access.    |
+|                               | Network Segmentation              | Separated OT and IT networks using firewalls and DMZs.         |
+|  **Access Control**         | Strong Password Policies          | Replaced default credentials and enforced password complexity. |
+|                               | Multi-Factor Authentication (MFA) | Implemented MFA for accessing sensitive systems.               |
+|  **System Hardening**      | Security Patching                 | Updated outdated firmware/software to close vulnerabilities.   |
+|  **Monitoring & Detection** | Basic Logging & Alerting          | Introduced basic logging and monitoring mechanisms.            |
+|  **Incident Response**      | Incident Response Plan            | Created protocols to respond to future cyber threats.          |
+|  **Training & Awareness**   | Initial Awareness Campaigns       | Educated staff on cyber hygiene and attack reporting.          |
 
 ---
 
@@ -99,11 +105,21 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ##  8. Recommendations for Future Improvements
 
-- Adopt **Zero Trust Architecture**.
-- Use **AI/ML for anomaly detection** in ICS.
-- Enable **Cyber Range training** for operational staff.
-- Increase **funding and support** for small utilities.
-- Secure **supply chains** for hardware/software procurement.
-- Conduct **regular red team exercises**.
+| **Category**                  | **Mitigation Technique**                | **Description / Action**                                                                   |
+| ----------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------ |
+|  **Network Security**       | Secure Protocols                        | Disable unused ports; enforce secure communication protocols (e.g., SSH, HTTPS).           |
+|  **Access Control**         | Least Privilege Principle               | Users only get access to what they need — nothing more.                                    |
+|  **System Hardening**      | Disable Unused Services                 | Reduce attack surface by turning off unnecessary system services.                          |
+|                               | Secure Configuration                    | Harden device settings according to ICS security standards.                                |
+|  **Monitoring & Detection** | Intrusion Detection System (IDS)        | Monitor traffic for suspicious patterns in real time.                                      |
+|                               | SIEM (Security Info & Event Management) | Log and analyze events for quicker threat detection.                                       |
+|                               | Anomaly Detection (AI/ML)               | Use behavior analysis to detect unusual activity.                                          |
+|  **Incident Response**     | Red Team / Blue Team Exercises          | Simulate attack/defense to improve preparedness.                                           |
+|  **Training & Awareness**   | ICS Cybersecurity Training              | Educate operators on phishing, malware, and system hygiene.                                |
+|                               | Awareness Campaigns                     | Encourage secure behavior and rapid threat reporting.                                      |
+|  **Advanced Architecture**  | Zero Trust Architecture                 | Assume no one is trusted — verify everything internally and externally.                    |
+|                               | Secure by Design                        | Build ICS (Industrial Control Systems) systems with embedded security controls.           |
+|  **Governance & Policy**      | Supply Chain Vetting                    | Ensure third-party vendors follow cybersecurity best practices.                            |
+|                               | Threat Intelligence Sharing             | Collaborate across industries to share attack indicators.                                  |
 
 ---

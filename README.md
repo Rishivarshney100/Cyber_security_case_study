@@ -1,22 +1,22 @@
 
-# 📄 Cyberattack on New York Dam (Bowman Avenue Dam) - Research Summary
+#  Cyberattack on New York Dam (Bowman Avenue Dam) - Research Summary
 
 This repository provides a detailed overview of the cyberattack on the Bowman Avenue Dam in New York. The attack, carried out in 2013 and disclosed publicly in 2015, was an example of an operational cyberattack targeting critical infrastructure. This document outlines the technical, operational, and strategic aspects of the incident.
 
 ---
 
-## 🗓️ 1. Year of Incident
+##  1. Year of Incident
 - **Year:** 2013  
 - **Public Disclosure:** December 2015
 
 ---
 
-## ⚠️ 2. Risk, Vulnerability, and Threat
+##  2. Risk, Vulnerability, and Threat
 
 ### Risk
 - Unauthorized access to critical infrastructure.
 - Potential manipulation of industrial control systems (ICS).
-- Physical disruption to water management.
+- Physical disruption to the water management system.
 
 ### Vulnerability
 - Internet-connected control systems without adequate protection.
@@ -24,21 +24,40 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 - No proper network segmentation.
 
 ### Threat
-- Attributed to a **state-sponsored group from Iran**.
-- Aimed to identify and exploit vulnerabilities in U.S. infrastructure.
+- A **state-sponsored group from Iran comprising 7 hackers**.
+- They were trying to identify and exploit vulnerabilities in U.S. infrastructure.
 
 ---
 
-## 🧰 3. Tactics, Techniques, and Procedures (TTPs) Used
+##  3. Tactics, Techniques, and Procedures (TTPs) Used
 
-- **Reconnaissance:** Scanned public IPs and used platforms like Shodan.
-- **Initial Access:** Exploited remote portals with weak/default credentials.
-- **Execution:** Attempted interaction with gate control software.
-- **Command & Control (C2):** Maintained remote visibility (gate offline at time).
+| Tactic  (Why)                 | Goal                                                                       |
+| ------------------------ | -------------------------------------------------------------------------- |
+| **Initial Access**       | Gain entry into the dam's network/control system.                          |
+| **Discovery**            | Understand the system layout, control interfaces, and possible weaknesses. |
+| **Persistence**          | Maintain long-term access without being detected.                          |
+| **Collection**           | Gather intelligence about system configurations and capabilities.          |
+| **Impact** *(Attempted)* | Try to manipulate the dam's physical operations (e.g., control the gate).  |
+
+| Technique (how)                             | Description                                                                                              |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Network Scanning (Reconnaissance)** | Used tools like Shodan to find publicly exposed ICS devices.                                             |
+| **Remote Access via Unsecured Ports** | Connected to control systems over the internet using default credentials or weak authentication.         |
+| **Credential Guessing / Brute Force** | Attempted to guess usernames and passwords.                                                              |
+| **Manual System Inspection**          | Looked around inside the system to understand how controls and sensors work.                             |
+| **ICS/SCADA Access Interface**        | Tried to access Human-Machine Interfaces (HMIs) that control physical components (like the sluice gate). |
+
+## Procedure:
+1. Use Shodan or similar tools to locate internet-exposed ICS systems.
+2. Identify a target with minimal authentication or outdated software.
+3. Attempt login with default credentials (e.g., admin/admin).
+4. Upon successful login, explore interface panels to learn about dam operations.
+5. Maintain a connection to monitor or potentially manipulate the system.
+6. Exit quietly without making changes (in this case, the dam gate was offline, preventing action).
 
 ---
 
-## 🔧 4. Post-Measures Taken
+##  4. Post-Measures Taken
 
 - FBI and DHS launched forensic investigations.
 - Dam’s system was disconnected from the internet.
@@ -47,7 +66,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-## 🛡️ 5. Mitigation Techniques Used
+##  5. Mitigation Techniques Used
 
 - Network segmentation and firewall implementation.
 - Secure VPNs and multi-factor authentication (MFA).
@@ -57,7 +76,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-## 🧾 6. Similar Past Incidents
+##  6. Similar Past Incidents
 
 ### A. Ukraine Power Grid Attack (2015)
 - Disrupted power to 230,000+ citizens using **BlackEnergy** malware.
@@ -70,7 +89,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-## 🔒 7. CIA Triad Compliance
+##  7. CIA Triad Compliance
 
 - **Confidentiality:** Breached – Unauthorized access to critical systems.
 - **Integrity:** Threatened – Potential control over dam operations.
@@ -78,7 +97,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-## 🚀 8. Recommendations for Future Improvements
+##  8. Recommendations for Future Improvements
 
 - Adopt **Zero Trust Architecture**.
 - Use **AI/ML for anomaly detection** in ICS.
@@ -88,15 +107,3 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 - Conduct **regular red team exercises**.
 
 ---
-
-## 📁 File Contents
-
-- `Cyberattack_on_New_York_Dam_Report.docx`: Full research report on the cyberattack.
-- `README.md`: Summary and structured documentation.
-
----
-
-## 🧠 Author Notes
-
-This document was compiled as part of a research project on **operational cyberattacks** and critical infrastructure protection. The case study demonstrates the importance of proactive cybersecurity in ICS environments.
-

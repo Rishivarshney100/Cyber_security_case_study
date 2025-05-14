@@ -6,6 +6,18 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 ##  Category: Operational Technology
 ---
 
+## Table of Contents
+
+1. **[Year of Incident](#year-of-incident)**
+2. **[Risk, Vulnerability, and Threat](#risk-vulnerability-and-threat)**
+3. **[Tactics, Techniques, and Procedures (TTPs) Used](#tactics-techniques-and-procedures-ttps-used)**
+4. **[Post-Measures Taken](#post-measures-taken)**
+5. **[Mitigation Techniques Used](#mitigation-techniques-used)**
+6. **[Similar Past Incidents](#similar-past-incidents)**
+7. **[CIA Triad Compliance](#cia-triad-compliance)**
+8. **[Recommendations for Future Improvements](#recommendations-for-future-improvements)**
+---
+
 ##  1. Year of Incident
 - **Year:** 2013  
 - **Public Disclosure:** December 2015

@@ -18,13 +18,13 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 8. [Recommendations for Future Improvements](#recommendations-for-future-improvements)
 ---
 
-##  1. Year of Incident
+##   Year of Incident
 - **Year:** 2013  
 - **Public Disclosure:** December 2015
 
 ---
 
-##  2. Risk, Vulnerability, and Threat
+##   Risk, Vulnerability, and Threat
 
 ### Risk
 - Unauthorized access to critical infrastructure.
@@ -42,7 +42,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-##  3. Tactics, Techniques, and Procedures (TTPs) Used
+##   Tactics, Techniques, and Procedures (TTPs) Used
 
 | Tactic  (Why)                 | Goal                                                                       |
 | ------------------------ | -------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-##  4. Post-Measures Taken
+##   Post-Measures Taken
 
 - FBI and DHS launched forensic investigations.
 - Dam’s system was disconnected from the internet.
@@ -79,7 +79,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-##  5. Mitigation Techniques Used
+##   Mitigation Techniques Used
 
 | **Category**                  | **Mitigation Technique**          | **Description / Action**                                       |
 | ----------------------------- | --------------------------------- | -------------------------------------------------------------- |
@@ -94,7 +94,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-##  6. Similar Past Incidents
+##   Similar Past Incidents
 
 ### A. Ukraine Power Grid Attack (2015)
 - Disrupted power to 230,000+ citizens using **BlackEnergy** malware.
@@ -107,7 +107,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-##  7. CIA Triad Compliance
+##   CIA Triad Compliance
 
 - **Confidentiality:** Breached – Unauthorized access to critical systems.
 - **Integrity:** Threatened – Potential control over dam operations.
@@ -115,7 +115,7 @@ This repository provides a detailed overview of the cyberattack on the Bowman Av
 
 ---
 
-##  8. Recommendations for Future Improvements
+##   Recommendations for Future Improvements
 
 | **Category**                  | **Mitigation Technique**                | **Description / Action**                                                                   |
 | ----------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------ |
